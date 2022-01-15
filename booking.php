@@ -17,10 +17,10 @@ if(!isset($_SESSION['user']))
 									<img src="<?php echo $movie['image']; ?>" alt=""/>
 								</div>
 								<div class="desc span_3_of_2">
-									<p class="p-link" style="font-size:15px"><b>Cast : </b><?php echo $movie['cast']; ?></p>
-									<p class="p-link" style="font-size:15px"><b>Release Date : </b><?php echo date('d-M-Y',strtotime($movie['release_date'])); ?></p>
+									<p class="p-link" style="font-size:15px"><b>Diễn viên : </b><?php echo $movie['cast']; ?></p>
+									<p class="p-link" style="font-size:15px"><b>Khởi chiếu : </b><?php echo date('d-M-Y',strtotime($movie['release_date'])); ?></p>
 									<p style="font-size:15px"><?php echo $movie['desc']; ?></p>
-									<a href="<?php echo $movie['video_url']; ?>" target="_blank" class="watch_but">Watch Trailer</a>
+									<a href="<?php echo $movie['video_url']; ?>" target="_blank" class="watch_but">Xem Trailer</a>
 								</div>
 								<div class="clear"></div>
 							</div>
@@ -34,7 +34,7 @@ if(!isset($_SESSION['user']))
 									?>
 									<tr>
 										<td class="col-md-6">
-											Theatre
+											Rạp
 										</td>
 										<td>
 											<?php echo $theatre['name'].", ".$theatre['place'];?>
@@ -42,7 +42,7 @@ if(!isset($_SESSION['user']))
 										</tr>
 										<tr>
 											<td>
-												Screen
+												Màn hình
 											</td>
 										<td>
 											<?php 
@@ -60,7 +60,7 @@ if(!isset($_SESSION['user']))
 									</tr>
 									<tr>
 										<td>
-											Date
+											Ngày
 										</td>
 										<td>
 											<?php 
@@ -94,7 +94,7 @@ if(!isset($_SESSION['user']))
 									</tr>
 									<tr>
 										<td>
-											Show Time
+											Thời gian
 										</td>
 										<td>
 											<?php echo date('h:i A',strtotime($ttme['start_time']))." ".$ttme['name'];?> Show
@@ -102,7 +102,7 @@ if(!isset($_SESSION['user']))
 									</tr>
 									<tr>
 										<td>
-											Number of Seats
+											Số chỗ ngồi
 										</td>
 										<td>
 											<form  action="process_booking.php" method="post">
@@ -114,15 +114,15 @@ if(!isset($_SESSION['user']))
 									</tr>
 									<tr>
 										<td>
-											Amount
+											Số lượng
 										</td>
 										<td id="amount" style="font-weight:bold;font-size:18px">
 											Rs <?php echo $screen['charge'];?>
 										</td>
 									</tr>
 									<tr>
-										<td colspan="2"><?php if($avl[0]==$screen['seats']){?><button type="button" class="btn btn-danger" style="width:100%">House Full</button><?php } else { ?>
-										<button class="btn btn-info" style="width:100%">Book Now</button>
+										<td colspan="2"><?php if($avl[0]==$screen['seats']){?><button type="button" class="btn btn-danger" style="width:100%">Đã đầy</button><?php } else { ?>
+										<button class="btn btn-info" style="width:100%">Đặt ngay</button>
 										<?php } ?>
 										</form></td>
 									</tr>

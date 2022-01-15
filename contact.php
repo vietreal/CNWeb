@@ -1,13 +1,7 @@
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Free Theater Website Template | Contact :: w3layouts</title>
+<title>Contact</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
 <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js'></script>
@@ -23,10 +17,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		</div>
 			  <div class="nav-wrap">
 					<ul class="group" id="example-one">
-			           <li><a href="index.php">Home</a></li>
-			           <li><a href="about.php">About</a></li>
-			  		   <li><a href="movies_events.php">Movies & Events</a></li>
-			  		   <li class="current_page_item"><a href="contact.php">Contact</a></li>
+			           <li><a href="index.php">Trang chủ</a></li>
+			           <li><a href="about.php">Về chúng tôi</a></li>
+			  		   <li><a href="movies_events.php">Phim và sự kiện</a></li>
+			  		   <li class="current_page_item"><a href="contact.php">Liên hệ</a></li>
 			        </ul>
 			  </div>
  			<div class="clear"></div>
@@ -38,15 +32,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <form action="#" id="reservation-form" method="post">
 		       <fieldset>
 		                <div class="field">
-			                 <label>Find a Movie:</label>
+			                 <label>Tìm kiếm phim:</label>
 			                  <select class="select2">
-			                    <option>Movie list</option>
+			                    <option>Danh sách phim</option>
 			                  </select>
 			            </div>
 		                <div class="field1">
-			                   <label>Search</label>
+			                   <label>Tìm kiếm</label>
 			                  <select class="select1">
-			                    <option>Movies or Actors</option>
+			                    <option>Phim hoặc diễn viên</option>
 			                  </select>
 		                </div>
 		       </fieldset>
@@ -61,26 +55,26 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<div class="section group">
 				<div class="col span_2_of_3">
 				  <div class="contact-form">
-				  	<h3>Contact Us</h3>
+				  	<h3>Liên hệ chúng tôi</h3>
 					    <form action="process_contact.php" method="post" name="form11">
 					    	<div>
-						    	<span><label>NAME</label></span>
+						    	<span><label>Tên</label></span>
 						    	<span><input type="text" value="" required name="name"></span>
 						    </div>
 						    <div>
-						    	<span><label>E-MAIL</label></span>
+						    	<span><label>E-mail</label></span>
 						    	<span><input type="text" value="" required name="email"></span>
 						    </div>
 						    <div>
-						     	<span><label>MOBILE.NO</label></span>
+						     	<span><label>Số điện thoại</label></span>
 						    	<span><input type="number" value="" required name="mobile"></span>
 						    </div>
 						    <div>
-						    	<span><label>SUBJECT</label></span>
+						    	<span><label>Tiêu đề</label></span>
 						    	<span><textarea required name="subect"> </textarea></span>
 						    </div>
 						   <div>
-						   		<span><input type="submit">Submit</span>
+						   		<span><input type="submit">Gửi</span>
 						  </div>
 					    </form>
 				  </div>

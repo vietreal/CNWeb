@@ -13,10 +13,10 @@
 									<img src="<?php echo $movie['image']; ?>" alt=""/>
 								</div>
 								<div class="desc span_3_of_2">
-									<p class="p-link" style="font-size:15px"><b>Cast : </b><?php echo $movie['cast']; ?></p>
-									<p class="p-link" style="font-size:15px"><b>Release Date : </b><?php echo date('d-M-Y',strtotime($movie['release_date'])); ?></p>
+									<p class="p-link" style="font-size:15px"><b>Diễn viên : </b><?php echo $movie['cast']; ?></p>
+									<p class="p-link" style="font-size:15px"><b>Khởi chiếu : </b><?php echo date('d-M-Y',strtotime($movie['release_date'])); ?></p>
 									<p style="font-size:15px"><?php echo $movie['desc']; ?></p>
-									<a href="<?php echo $movie['video_url']; ?>" target="_blank" class="watch_but" style="text-decoration:none;">Watch Trailer</a>
+									<a href="<?php echo $movie['video_url']; ?>" target="_blank" class="watch_but" style="text-decoration:none;">Xem Trailer</a>	
 								</div>
 								<div class="clear"></div>
 							</div>
@@ -24,12 +24,12 @@
 							if(mysqli_num_rows($s))
 							{?>
 							<table class="table table-hover table-bordered text-center">
-								<h3 style="color:#444;" class="text-center">Available Shows</h3>
+								<h3 style="color:#444;" class="text-center">Phim hiện có</h3>
 
 								<thead>
 										<tr>
-											<th class="text-center" style="font-size:16px;"><b>Theatre</b></th>
-											<th class="text-center" style="font-size:16px;"><b>Show Timings</b></th>
+											<th class="text-center" style="font-size:16px;"><b>Rạp</b></th>
+											<th class="text-center" style="font-size:16px;"><b>Thời gian chiếu</b></th>
 										</tr>
 									</thead>
 							<?php
@@ -75,8 +75,8 @@
 							else
 							{
 								?>
-								<h3 style="color:#444; font-size:23px;" class="text-center">Currently there are no any shows available!</h3>
-								<p class="text-center">Please check back later!</p>
+								<h3 style="color:#444; font-size:23px;" class="text-center">Hiện tại không có bất kỳ phim nào có sẵn!</h3>
+								<p class="text-center">Vui lòng kiểm tra lại sau!</p>
 								<?php
 							}
 							?>
