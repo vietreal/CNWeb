@@ -1,12 +1,12 @@
 <?php
 include('header.php');
 ?>
-<link rel="stylesheet" href="../../validation/dist/css/bootstrapValidator.css"/>
+<link rel="stylesheet" href="../../utils/validation/dist/css/bootstrapValidator.css"/>
     
-<script type="text/javascript" src="../../validation/dist/js/bootstrapValidator.js"></script>
+<script type="text/javascript" src="../../utils/validation/dist/js/bootstrapValidator.js"></script>
   <!-- =============================================== -->
   <?php
-    include('../../form.php');
+    include('../../user/form.php');
     $frm=new formBuilder;      
   ?>    
 
@@ -18,8 +18,8 @@ include('header.php');
         Add Theatre
       </h1>
       <ol class="breadcrumb">
-        <li><a href="index.php"><i class="fa fa-home"></i> Home</a></li>
-        <li class="active">Add Theatre</li>
+        <li><a href="index.php"><i class="fa fa-home"></i> Trang chủ</a></li>
+        <li class="active">Thêm rạp phim</li>
       </ol>
     </section>
 
@@ -31,29 +31,29 @@ include('header.php');
         <div class="box-body">
             <form action="process_add_theater.php" method="post" id="form1">
               <div class="form-group">
-                <label class="control-label">Theatre Name</label>
+                <label class="control-label">Tên rạp phim</label>
                 <input type="text" name="name" class="form-control"/>
                 <?php $frm->validate("name",array("required","label"=>"Theatre Name")); // Validating form using form builder written in form.php ?>
               </div>
               <div class="form-group">
-                <label class="control-label">Theatre Address</label>
+                <label class="control-label">Địa chỉ</label>
                 <input type="text" name="address" class="form-control"/>
                 <?php $frm->validate("address",array("required","label"=>"Theatre Address")); // Validating form using form builder written in form.php ?>
               </div>
               <div class="form-group">
-                <label class="control-label">Place</label>
+                <label class="control-label">Khu phố</label>
                 <!-- <input type="text" name="place" id="autocomplete" class="form-control"> -->
                 <input type="text" name="place" class="form-control">
                 <?php $frm->validate("place",array("required","label"=>"Place")); // Validating form using form builder written in form.php ?>
               </div>
               <div class="form-group">
-                 <label class="control-label">State</label>
-                <input type="text" name="state" id="administrative_area_level_1" s placeholder="State" class="form-control">
+                 <label class="control-label">Tỉnh</label>
+                <input type="text" name="state" id="administrative_area_level_1" s placeholder="" class="form-control">
                 <?php $frm->validate("state",array("required","label"=>"State")); // Validating form using form builder written in form.php ?>
               </div>
               <div class="form-group">
                 <label class="control-label">Pin Code</label>
-                 <input type="text" name="pin" id="postal_code"s placeholder="Zip code" class="form-control">
+                 <input type="text" name="pin" id="postal_code"s placeholder="" class="form-control">
                  <?php $frm->validate("pin",array("required","label"=>"Pin Code","regexp"=>"pin")); // Validating form using form builder written in form.php ?>
               </div>
               <?php
@@ -66,12 +66,12 @@ include('header.php');
                 }
               ?>
               <div class="form-group">
-                <label class="control-label">Username</label>
+                <label class="control-label">Tài khoản</label>
                 <input type="text" name="username" class="form-control" value="<?php echo $username ?>">
                 <?php $frm->validate("username",array("required","label"=>"Username")); // Validating form using form builder written in form.php ?>
               </div>
               <div class="form-group">
-                <label class="control-label">Password</label>
+                <label class="control-label">Mật khẩu</label>
                 <input type="text" name="password" class="form-control" value="<?php echo "PWD".rand(123456,999999);?>">
                 <?php $frm->validate("password",array("required","label"=>"Password")); // Validating form using form builder written in form.php ?>
               </div>

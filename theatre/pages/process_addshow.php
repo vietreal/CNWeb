@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include('../../config.php');
+    include('../../utils/config/config.php');
     extract($_POST);
     foreach($stime as $time)
     {

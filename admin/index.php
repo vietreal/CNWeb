@@ -31,8 +31,7 @@
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
-    <?php session_start(); include('../msgbox.php');?>
-    <p class="login-box-msg">Please login to start your session</p>
+    <?php session_start(); include('../user/msgbox.php');?>
 <form action="pages/process_login.php" method="post">
       <div class="form-group has-feedback">
         <input name="Email" type="text" size="25" placeholder="Username" class="form-control"/>
@@ -43,11 +42,11 @@
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <div class="form-group">
-          <button type="submit" class="btn btn-danger">Login</button>
+          <button type="submit" class="btn btn-danger">Đăng nhập</button>
       </div>
     </form>
 
-    <a href="../theatre/index.php">Go To Theatre Panel</a>
+    <a href="../theatre/index.php">Đến trang quản lý rạp phim</a>
 
   </div>
   <!-- /.login-box-body -->

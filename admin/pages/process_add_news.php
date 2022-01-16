@@ -1,5 +1,5 @@
 <?php
-    include('../../config.php');
+    include('../../utils/config/config.php');
     extract($_POST);
        $uploaddir = '../news_images/';
       $uploadfile = $uploaddir . basename($_FILES['attachment']['name']);

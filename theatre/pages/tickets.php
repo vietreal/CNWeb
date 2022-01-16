@@ -1,12 +1,12 @@
 <?php
 include('header.php');
 ?>
-<link rel="stylesheet" href="../../validation/dist/css/bootstrapValidator.css"/>
+<link rel="stylesheet" href="../../utils/validation/dist/css/bootstrapValidator.css"/>
     
-<script type="text/javascript" src="../../validation/dist/js/bootstrapValidator.js"></script>
+<script type="text/javascript" src="../../utils/validation/dist/js/bootstrapValidator.js"></script>
   <!-- =============================================== -->
   <?php
-    include('../../form.php');
+    include('../../user/form.php');
     $frm=new formBuilder;      
   ?> 
   <!-- =============================================== -->

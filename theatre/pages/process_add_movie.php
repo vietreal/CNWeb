@@ -1,9 +1,9 @@
 <?php
     session_start();
-    include('../../config.php');
+    include('../../utils/config/config.php');
     extract($_POST);
     
-    $target_dir = "../../images/";
+    $target_dir = "../../assets/images/";
     $target_file = $target_dir . basename($_FILES["image"]["name"]);
     
     $flname="images/".basename($_FILES["image"]["name"]);

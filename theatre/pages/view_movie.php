@@ -25,7 +25,7 @@ include('header.php');
             <div class="box box-primary">
             <!-- /.box-header -->
             <div class="box-body">
-              <?php include('../../msgbox.php');?>
+              <?php include('../../user/msgbox.php');?>
               <ul class="todo-list">
                  <?php 
                         $qry7=mysqli_query($con,"select * from tbl_movie");

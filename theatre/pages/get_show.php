@@ -1,6 +1,6 @@
 <?php
     extract($_POST);
-    include('../../config.php');
+    include('../../utils/config/config.php');
     $w=mysqli_query($con,"select * from tbl_show_time where screen_id='$id'");
     ?>
     <option value="0">Select Show</option>

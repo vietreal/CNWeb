@@ -5,8 +5,8 @@ if(!isset($_SESSION['admin']))
 {
   header('location:../index.php');
 }
-date_default_timezone_set('Asia/Kolkata');
-include('../../config.php');
+date_default_timezone_set('Asia/Ho_Chi_Minh');
+include('../../utils/config/config.php');
 ?>
 <!DOCTYPE html>
 <html>
@@ -15,9 +15,9 @@ include('../../config.php');
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Admin | Admin</title>
   <!-- valodation -->
-  <script type="text/javascript" src="../validation/vendor/jquery/jquery-1.10.2.min.js"></script>
-  <link rel="stylesheet" href="../validation/dist/css/bootstrapValidator.css"/> 
-  <script type="text/javascript" src="../validation/dist/js/bootstrapValidator.js"></script>
+  <script type="text/javascript" src="../utils/validation/vendor/jquery/jquery-1.10.2.min.js"></script>
+  <link rel="stylesheet" href="../utils/validation/dist/css/bootstrapValidator.css"/> 
+  <script type="text/javascript" src="../utils/validation/dist/js/bootstrapValidator.js"></script>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
@@ -32,12 +32,6 @@ include('../../config.php');
        folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href="../dist/css/skins/_all-skins.min.css">
 
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <!-- Site wrapper -->
@@ -80,14 +74,10 @@ include('../../config.php');
               </li>
               <li class="user-footer">
                 <div class="pull-right">
-                  <a href="logout.php" class="btn btn-default btn-flat">Logout</a>
+                  <a href="logout.php" class="btn btn-default btn-flat">Đăng xuất</a>
                 </div>
               </li>
             </ul>
-          </li>
-          <!-- Control Sidebar Toggle Button -->
-          <li>
-            <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
           </li>
         </ul>
       </div>
@@ -114,7 +104,7 @@ include('../../config.php');
       <ul class="sidebar-menu">
         <li class="treeview">
           <a href="index.php">
-            <i class="fa fa-home"></i> <span>Home</span>
+            <i class="fa fa-home"></i> <span>Trang chủ</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
@@ -123,7 +113,7 @@ include('../../config.php');
         
           <li class="treeview">
           <a href="add_theatre.php">
-            <i class="fa fa-film"></i> <span>Add Theatre</span>
+            <i class="fa fa-film"></i> <span>Thêm rạp phim</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
@@ -131,7 +121,7 @@ include('../../config.php');
         </li>
         <li class="treeview">
           <a href="add_movie_news.php">
-            <i class="fa fa-plus"></i> <span>Upcoming Movie News</span>
+            <i class="fa fa-plus"></i> <span>Phim sắp chiếu</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>

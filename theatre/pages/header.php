@@ -5,8 +5,8 @@ if(!isset($_SESSION['theatre']))
 {
   header('location:../index.php');
 }
-date_default_timezone_set('Asia/Kolkata');
-include('../../config.php');
+date_default_timezone_set('Asia/Ho_Chi_Minh');
+include('../../utils/config/config.php');
 $th=mysqli_query($con,"select * from tbl_theatre where id='".$_SESSION['theatre']."'");
 $theatre=mysqli_fetch_array($th);
 ?>
@@ -17,9 +17,9 @@ $theatre=mysqli_fetch_array($th);
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Theatre Assistance</title>
   <!-- valodation -->
-  <script type="text/javascript" src="../validation/vendor/jquery/jquery-1.10.2.min.js"></script>
-  <link rel="stylesheet" href="../validation/dist/css/bootstrapValidator.css"/> 
-  <script type="text/javascript" src="../validation/dist/js/bootstrapValidator.js"></script>
+  <script type="text/javascript" src="../utils/validation/vendor/jquery/jquery-1.10.2.min.js"></script>
+  <link rel="stylesheet" href="../utils/validation/dist/css/bootstrapValidator.css"/> 
+  <script type="text/javascript" src="../utils/validation/dist/js/bootstrapValidator.js"></script>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
@@ -82,14 +82,10 @@ $theatre=mysqli_fetch_array($th);
               </li>
               <li class="user-footer">
                 <div class="pull-right">
-                  <a href="logout.php" class="btn btn-default btn-flat">Logout</a>
+                  <a href="logout.php" class="btn btn-default btn-flat">Đăng xuất</a>
                 </div>
               </li>
             </ul>
-          </li>
-          <!-- Control Sidebar Toggle Button -->
-          <li>
-            <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
           </li>
         </ul>
       </div>
@@ -116,7 +112,7 @@ $theatre=mysqli_fetch_array($th);
       <ul class="sidebar-menu">
         <li class="treeview">
           <a href="index.php">
-            <i class="fa fa-home"></i> <span>Home</span>
+            <i class="fa fa-home"></i> <span>Trang chủ</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
@@ -125,7 +121,7 @@ $theatre=mysqli_fetch_array($th);
         
           <li class="treeview">
           <a href="add_movie.php">
-            <i class="fa fa-plus"></i> <span>Add Movie</span>
+            <i class="fa fa-plus"></i> <span>Thêm phim</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
@@ -134,7 +130,7 @@ $theatre=mysqli_fetch_array($th);
 
         <li class="treeview">
           <a href="view_movie.php">
-            <i class="fa fa-list-alt"></i> <span>View Movies</span>
+            <i class="fa fa-list-alt"></i> <span>Danh sách phim</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
@@ -143,7 +139,7 @@ $theatre=mysqli_fetch_array($th);
 
         <li class="treeview">
           <a href="add_show.php">
-            <i class="fa fa-ticket"></i> <span>Add Show</span>
+            <i class="fa fa-ticket"></i> <span>Thêm lịch chiếu</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
@@ -151,15 +147,7 @@ $theatre=mysqli_fetch_array($th);
         </li>
         <li class="treeview">
           <a href="todays_shows.php">
-            <i class="fa fa-calendar"></i> <span>Todays Shows</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-        </li>
-        <li class="treeview">
-          <a href="tickets.php">
-            <i class="fa fa-film"></i> <span>Todays Bookings</span>
+            <i class="fa fa-calendar"></i> <span>Lịch chiếu hôm nay</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
@@ -167,7 +155,7 @@ $theatre=mysqli_fetch_array($th);
         </li>
         <li class="treeview">
           <a href="view_shows.php">
-            <i class="fa fa-eye"></i> <span>View Show</span>
+            <i class="fa fa-eye"></i> <span>Danh sách lịch chiếu</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
@@ -175,7 +163,7 @@ $theatre=mysqli_fetch_array($th);
         </li>
         <li class="treeview">
           <a href="add_theatre_2.php">
-            <i class="fa fa-film"></i> <span>Theatre Details</span>
+            <i class="fa fa-film"></i> <span>Thông tin về rạp</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>

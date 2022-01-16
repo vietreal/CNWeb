@@ -1,5 +1,5 @@
  <?php
- include('../../config.php');
+ include('../../utils/config/config.php');
     $sr=mysqli_query($con,"select * from tbl_show_time where screen_id='".$_POST['screen']."'");
     if(mysqli_num_rows($sr))
     {

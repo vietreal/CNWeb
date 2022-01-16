@@ -1,5 +1,5 @@
  <?php
- include('../../config.php');
+ include('../../utils/config/config.php');
     $sr=mysqli_query($con,"select * from tbl_screens where t_id='".$_POST['id']."'");
     if(mysqli_num_rows($sr))
     {

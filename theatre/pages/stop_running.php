@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('../../config.php');
+include('../../utils/config/config.php');
 extract($_GET);
 mysqli_query($con,"update tbl_shows set status='0' where s_id='$id'");
 $_SESSION['success']="Show Deleted";

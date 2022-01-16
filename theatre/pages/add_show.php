@@ -1,12 +1,12 @@
 <?php
 include('header.php');
 ?>
-<link rel="stylesheet" href="../../validation/dist/css/bootstrapValidator.css"/>
+<link rel="stylesheet" href="../../utils/validation/dist/css/bootstrapValidator.css"/>
     
-<script type="text/javascript" src="../../validation/dist/js/bootstrapValidator.js"></script>
+<script type="text/javascript" src="../../utils/validation/dist/js/bootstrapValidator.js"></script>
   <!-- =============================================== -->
   <?php
-    include('../../form.php');
+    include('../../user/form.php');
     $frm=new formBuilder;      
   ?> 
   <!-- =============================================== -->
@@ -16,11 +16,11 @@ include('header.php');
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Add Show
+        Thêm lịch chiếu
       </h1>
       <ol class="breadcrumb">
-        <li><a href="index.php"><i class="fa fa-home"></i> Home</a></li>
-        <li class="active">Add Show</li>
+        <li><a href="index.php"><i class="fa fa-home"></i> Trang chủ</a></li>
+        <li class="active">Thêm lịch chiếu</li>
       </ol>
     </section>
 
@@ -30,12 +30,12 @@ include('header.php');
       <!-- Default box --> 
       <div class="box">
         <div class="box-body">
-          <?php include('../../msgbox.php');?>
+          <?php include('../../user/msgbox.php');?>
           <form action="process_addshow.php" method="post" id="form1">
             <div class="form-group">
-              <label class="control-label">Select Movie</label>
+              <label class="control-label">Chọn phim</label>
               <select name="movie" class="form-control">
-                <option value>Select Movie</option>
+                <option value>Chọn phim</option>
                 <?php
                   $mv=mysqli_query($con,"select * from tbl_movie where status='0'");
                   while($movie=mysqli_fetch_array($mv))
@@ -49,9 +49,9 @@ include('header.php');
               <?php $frm->validate("movie",array("required","label"=>"Movie")); // Validating form using form builder written in form.php ?>
             </div>
             <div class="form-group">
-              <label class="control-label">Select Screen</label>
+              <label class="control-label">Chọn phòng chiếu</label>
               <select name="screen" class="form-control" id="screen">
-                <option value>Select Screen</option>
+                <option value>Chọn phòng chiếu</option>
                 <?php
                   $sc=mysqli_query($con,"select * from tbl_screens where t_id='".$_SESSION['theatre']."'");
                   while($screen=mysqli_fetch_array($sc))
@@ -65,19 +65,19 @@ include('header.php');
               <?php $frm->validate("screen",array("required","label"=>"Screen")); // Validating form using form builder written in form.php ?>
             </div>
             <div class="form-group">
-              <label class="control-label">Select Show Times</label>
+              <label class="control-label">Chọn lịch chiếu</label>
               <select name="stime[]" class="form-control" id="stime" multiple>
-                <option value="0">Select Show Times</option>
+                <option value="0">Chọn lịch chiếu</option>
               </select>
               
             </div>
             <div class="form-group">
-              <label class="control-label">Start Date</label>
+              <label class="control-label">Ngay bắt đầu</label>
               <input type="date" name="sdate" class="form-control"/>
               <?php $frm->validate("sdate",array("required","label"=>"Start Date")); // Validating form using form builder written in form.php ?>
             </div>
             <div class="form-group">
-              <button class="btn btn-success">Add Show</button>
+              <button class="btn btn-success">Thêm lịch chiếu</button>
             </div>
           </form>
         </div> 
@@ -88,9 +88,6 @@ include('header.php');
     </section>
     <!-- /.content -->
   </div>
-  <?php
-include('footer.php');
-?>
 <script type="text/javascript">
   $('#screen').change(function(){
     screen=$(this).val();

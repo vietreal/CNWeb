@@ -11,8 +11,8 @@ include('header.php');
         View Shows
       </h1>
       <ol class="breadcrumb">
-        <li><a href="index.php"><i class="fa fa-home"></i> Home</a></li>
-        <li class="active">View Shows</li>
+        <li><a href="index.php"><i class="fa fa-home"></i> Trang chủ</a></li>
+        <li class="active">Xem lịch chiếu</li>
       </ol>
     </section>
 
@@ -21,29 +21,29 @@ include('header.php');
       <!-- Default box --> 
       <div class="box">
          <div class="box-header with-border">
-              <h3 class="box-title">Available Shows</h3>
+              <h3 class="box-title">Lịch chiếu đã có</h3>
             </div>
         <div class="box-body">
-          <?php include('../../msgbox.php');?>
+          <?php include('../../user/msgbox.php');?>
           <?php
           $sw=mysqli_query($con,"select * from tbl_shows where st_id in(select st_id from tbl_show_time where screen_id in(select screen_id from  tbl_screens where t_id='".$_SESSION['theatre']."')) and status='1'");
           if(mysqli_num_rows($sw))
           {?>
             <table class="table">
               <th class="col-md-1">
-                Sl.no
+                STT
               </th>
               <th class="col-md-2">
-                Screen
+                Phòng chiếu
               </th>
               <th class="col-md-3">
-                Show Time
+                Thời gian chiếu
               </th>
               <th class="col-md-3">
-                Movie
+                Phim
               </th>
               <th class="col-md-3">
-                Options
+                Tuỳ chọn
               </th>
               <?php
               $sl=1;
@@ -74,14 +74,14 @@ include('header.php');
                   <td>
                     <?php if($shows['r_status']==1)
                     {
-                    ?><a href="change_running.php?id=<?php echo $shows['s_id'];?>&status=0"><button class="btn btn-danger">Stop Running</button></a>
+                    ?><a href="change_running.php?id=<?php echo $shows['s_id'];?>&status=0"><button class="btn btn-danger">Dừng</button></a>
                     <?php
                     }
                     else
-                    {?><a href="change_running.php?id=<?php echo $shows['s_id'];?>&status=1"><button class="btn btn-success">Start Running</button></a>
+                    {?><a href="change_running.php?id=<?php echo $shows['s_id'];?>&status=1"><button class="btn btn-success">Bắt đầu</button></a>
                     <?php 
                     }?>
-                    <a href="stop_running.php?id=<?php echo $shows['s_id'];?>"><button class="btn btn-warning">Stop Show</button></a>
+                    <a href="stop_running.php?id=<?php echo $shows['s_id'];?>"><button class="btn btn-warning">Dừng</button></a>
                   </td>
                 </tr>
                 <?php
@@ -93,7 +93,7 @@ include('header.php');
           else
           {
             ?>
-            <h3>No Shows Added</h3>
+            <h3>Không có lịch chiếu</h3>
             <?php
           }
           ?>

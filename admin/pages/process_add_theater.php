@@ -1,5 +1,5 @@
 <?php
-    include('../../config.php');
+    include('../../utils/config/config.php');
     extract($_POST);
     mysqli_query($con,"insert into  tbl_theatre values(NULL,'$name','$address','$place','$state','$pin')");
     $id=mysqli_insert_id($con);

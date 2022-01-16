@@ -1,5 +1,5 @@
 <?php
-include('../../config.php');
+include('../../utils/config/config.php');
 session_start();
 $email = $_POST["Email"];
 $pass = $_POST["Password"];

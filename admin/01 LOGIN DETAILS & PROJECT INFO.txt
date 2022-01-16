@@ -1,4 +1,4 @@
-**Database Name: movietheatredb**
+*Database Name: movietheatredb**
 
 **Developed by Yugesh Verma**
 
